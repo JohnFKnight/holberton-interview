@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """
 Unlock list indices i.e. boxes.
 Boxes can have multiple keys (index number)
@@ -20,31 +19,25 @@ If opened counter = len(boxes), return true
 Return false
 """
 
+
 def canUnlockAll(boxes):
     l = len(boxes)
     if l == 0:
         return False
-    opened = [None] *  len(boxes)
+    opened = [None] * len(boxes)
     opened[0] = 1
     count = 1
     for box in boxes:
         l2 = len(box)
-#        print("box ", box, "length ", l2)
         if not boxes[0]:
-#            print("1st False")
             return False
         if not box and count == l:
-#            print("1st True. Count = ", count)
             return True
         else:
             if not box:
-#                print("not box ", box, "count", count)
-#                print("2nd False")
                 return False
         for key in box:
-#            print("key ", key)
             if key > l and count < l:
-                print("key ", key, "count ", count)
                 continue
             else:
                 if key > l:
@@ -54,6 +47,5 @@ def canUnlockAll(boxes):
                 count += 1
                 if count == l:
                     return True
-#        print("Opened ", opened, "count", count)
     print("Last False")
     return False
