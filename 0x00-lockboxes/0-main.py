@@ -17,8 +17,11 @@ print(canUnlockAll(boxes))
 boxes = [[1, 9], [2], [3], [4], []]
 print(canUnlockAll(boxes))
 
-boxes = [[1], [2], [3, 9], [4, 9], []]
+boxes = [[1], [2], [3], [4, 9], []]
 print(canUnlockAll(boxes))
 
 boxes = []
+print(canUnlockAll(boxes))
+
+boxes = [[]]
 print(canUnlockAll(boxes))
