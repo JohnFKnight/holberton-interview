@@ -19,7 +19,7 @@ def canUnlockAll(boxes):
             if not box:
                 return False
         for key in box:
-            if key > l - 1:
+            if key > l - 1 or key < 0:
                 return False
             if opened[key] is None:
                 opened[key] = 1
