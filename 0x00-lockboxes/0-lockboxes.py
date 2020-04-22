@@ -37,11 +37,11 @@ def canUnlockAll(boxes):
             if not box:
                 return False
         for key in box:
-            if key > l and count < l:
-                continue
-            else:
-                if key > l:
-                    return False
+            if key > l:
+                return False
+            # else:
+            #     if key > l:
+            #         return False
             if opened[key] is None:
                 opened[key] = 1
                 count += 1
