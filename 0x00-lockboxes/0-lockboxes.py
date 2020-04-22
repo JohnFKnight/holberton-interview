@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-""" See if all boxes in list can be unlocked. """
+"""See if all boxes in list can be unlocked."""
 
 
 def canUnlockAll(boxes):
+    """Loop through in key in each box."""
     l = len(boxes)
     if l == 0:
         return False
