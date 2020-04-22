@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-""" See if all boxes in a list
-of boxes can be opened. """
+""" See if all boxes in a list of boxes can be opened. """
 
 def canUnlockAll(boxes):
     l = len(boxes)
