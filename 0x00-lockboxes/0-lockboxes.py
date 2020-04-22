@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+""" See if all boxes in list can be unlocked. """
+
 
 def canUnlockAll(boxes):
     l = len(boxes)
