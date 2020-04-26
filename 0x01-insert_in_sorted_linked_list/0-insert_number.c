@@ -35,7 +35,6 @@ listint_t *insert_node(listint_t **head, int number)
 			}
 			else
 			{
-				printf("current else %i \n", current->n);
 				new->next = current;
 				prev->next = new;
 			}
