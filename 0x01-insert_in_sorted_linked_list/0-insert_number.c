@@ -30,7 +30,7 @@ listint_t *insert_node(listint_t **head, int number)
 	{
 		while (current->next != NULL)
 		{
-			/* Quit when found a higher number */
+			/* Quit when found a higher number or end of list */
 			if (current->n > number)
 				break;
 			else
