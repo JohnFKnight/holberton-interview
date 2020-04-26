@@ -28,7 +28,6 @@ listint_t *insert_node(listint_t **head, int number)
 	{
 		while (current->next != NULL)
 		{
-			printf("current if %i \n", current->n);
 			if (current->n < number)
 			{
 				prev = current;
@@ -40,7 +39,6 @@ listint_t *insert_node(listint_t **head, int number)
 				new->next = current;
 				prev->next = new;
 			}
-			printf("current while %i \n", current->n);
 		}
 		if (current->next == NULL)
 		{
