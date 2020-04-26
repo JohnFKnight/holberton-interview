@@ -27,32 +27,32 @@ listint_t *insert_node(listint_t **head, int number)
 	{
 		while (current->next != NULL)
 		{
-			/* printf("in while loop %i \n", current->n); */
+			/* Quit when found a higher number */
 			if (current->n > number)
 				break;
 			else
 			{
-				/* printf("if current < num\n"); */
+				/* Go to next node */
 				prev = current;
 				current = current->next;
 			}
 		}
 		if (prev == *head)
 		{
-			/* printf("prev is NULL %i. \n", prev->n); */
+			/* Insert at top of list */
 			new->next = current;
 			*head = new;
 			/* return (new); */
 		}
 		else if (current->next != NULL)
 		{
+			/* Insert in middle of list */
 			new->next = current;
 			prev->next = new;
-			/* return (new); */
 		}
-		/* } */
 		else
 		{
+			/* Insert at end of list */
 			new->next = NULL;
 			current->next = new;
 		}
