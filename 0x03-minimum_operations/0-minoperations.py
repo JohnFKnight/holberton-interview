@@ -5,14 +5,14 @@
 from sys import argv
 
 
-def minop(n, x=1, cp=1, acc=0):
+def minop(n, x="H", cp="H", acc=0):
     """ Calc min ops """
 
     if (n == 1 or n < 0):
         return 0
-    if (x == n):
+    if (len(x) == n):
         return acc + 1
-    if (x > n):
+    if (len(x) > n):
         return -1
 
     # option copy paste
