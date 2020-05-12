@@ -25,8 +25,8 @@ def minop(n, x="H", cp="H", acc=0):
     # print("z=", z)
     # print("####" * 3)
     if (y != -1 and y <= z):
-        return y
-    return z
+        return int(y)
+    return int(z)
 
 # print(minop(10))
 
