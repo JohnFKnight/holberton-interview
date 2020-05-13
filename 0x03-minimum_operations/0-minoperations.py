@@ -37,4 +37,6 @@ def minOperations(n):
 
     # if (__name__ == "__main__"):
     ops = minop(n)
+    if (ops == -1):
+        return 0
     return ops
