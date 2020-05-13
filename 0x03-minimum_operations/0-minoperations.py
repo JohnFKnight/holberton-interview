@@ -22,6 +22,7 @@ def minop(n):  # , x="H", cp="H", acc=0):
             h += h * i
     # print(i, acc)
     if acc == 0:
+        h = h * n
         acc = n
     return acc
 
