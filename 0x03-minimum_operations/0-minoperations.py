@@ -7,7 +7,7 @@ from sys import setrecursionlimit
 setrecursionlimit(10**6)
 
 
-def minop(n):  # , x="H", cp="H", acc=0):
+def minOperations(n):  # , x="H", cp="H", acc=0):
     """Calc number of ops."""
     acc = 0
     h = "H"
@@ -28,11 +28,9 @@ def minop(n):  # , x="H", cp="H", acc=0):
     return acc
 
 
-def minOperations(n):
-    """Driver code."""
+# def minOperations(n):
+#     """Driver code."""
 
-    # if (__name__ == "__main__"):
-    ops = minop(n)
-    # if (ops == -1):
-    #     return 0
-    return ops
+
+#     ops = minop(n)
+#     return ops
