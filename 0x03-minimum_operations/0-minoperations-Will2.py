@@ -2,8 +2,9 @@
 # Tail recursive. -Will?
 # Least num of commands to go from x=1 to n
 
-from sys import argv
+from sys import setrecursionlimit
 
+setrecursionlimit(10**6)
 
 def minop(n, x="H", cp="H", acc=0):
     """ Calc min ops """
@@ -25,8 +26,8 @@ def minop(n, x="H", cp="H", acc=0):
     # print("z=", z)
     # print("####" * 3)
     if (y != -1 and y <= z):
-        return y
-    return z
+        return int(y)
+    return int(z)
 
 # print(minop(10))
 
@@ -36,4 +37,6 @@ def minOperations(n):
 
     # if (__name__ == "__main__"):
     ops = minop(n)
+    if (ops == -1):
+        return 0
     return ops
