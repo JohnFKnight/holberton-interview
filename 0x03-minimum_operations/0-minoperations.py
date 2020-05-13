@@ -9,6 +9,7 @@ setrecursionlimit(10**6)
 
 def minop(n):  # , x="H", cp="H", acc=0):
     acc = 0
+    h = "H"
 
     if n < 2:
         return 0
@@ -18,6 +19,7 @@ def minop(n):  # , x="H", cp="H", acc=0):
             # print (n, i)
             acc += i
             n = n / i
+            h += h * i
     # print(i, acc)
     if acc == 0:
         acc = n
