@@ -3,9 +3,6 @@
 """ Find min num ops"""
 
 
-setrecursionlimit(10**6)
-
-
 def minOperations(n):
     """Calc number of ops."""
     acc = 0
