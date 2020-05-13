@@ -12,7 +12,7 @@ def minop(n):  # , x="H", cp="H", acc=0):
     acc = 0
     h = "H"
 
-    if n < 2:
+    if n < 2 or type(n) is not int:
         return 0
 
     for i in range(2, n):
