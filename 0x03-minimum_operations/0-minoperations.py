@@ -8,6 +8,7 @@ setrecursionlimit(10**6)
 
 
 def minop(n):  # , x="H", cp="H", acc=0):
+    """Calc number of ops."""
     acc = 0
     h = "H"
 
