@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-# Tail recursive. -Will?
-# Least num of commands to go from x=1 to n
+
+""" Find min num ops"""
+
 
 from sys import setrecursionlimit
 
