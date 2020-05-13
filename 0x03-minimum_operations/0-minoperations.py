@@ -2,8 +2,9 @@
 # Tail recursive. -Will?
 # Least num of commands to go from x=1 to n
 
-from sys import argv
+from sys import setrecursionlimit
 
+setrecursionlimit(10**6)
 
 def minop(n, x="H", cp="H", acc=0):
     """ Calc min ops """
