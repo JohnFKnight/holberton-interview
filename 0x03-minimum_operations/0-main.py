@@ -25,6 +25,14 @@ n = 2
 print("Min number of operations to reach {} characters: {}"
       .format(n, minOperations(n)))
 
+n = 0
+print("Min number of operations to reach {} characters: {}"
+      .format(n, minOperations(n)))
+
 n = 9999
+print("Min number of operations to reach {} characters: {}"
+      .format(n, minOperations(n)))
+
+n = 2147483640
 print("Min number of operations to reach {} characters: {}"
       .format(n, minOperations(n)))
