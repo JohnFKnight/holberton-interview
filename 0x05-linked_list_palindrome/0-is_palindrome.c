@@ -43,13 +43,11 @@ int is_palindrome(listint_t **head)
 		node++;
 		current = current->next;
 	}
-
 	mid = cnt / 2;
 	if (cnt % 2 != 0)
 	{
-		for (int i = 1; i < mid; i++)
+		for (int i = 1; i <= mid; i++)
 		{
-			printf("%i, %i\n", arr[mid + i], arr[mid - i]);
 			if (arr[mid + i] != arr[mid - i])
 				return (0);
 		}
