@@ -17,7 +17,8 @@ def printall(status, fsize):
 
 
 def signal_handler(signal, frame):
-    # printall(status, fsize)
+    print (code, size, status, fsize)
+    # printall(code, size)
     sys.exit(0)
 
 code = []
@@ -29,7 +30,6 @@ for c, line in enumerate(sys.stdin):
     line = line.rstrip()
 #     # print(re.split("-| ", line))
     line = re.findall(r'(?:[^\s,"]|"(?:\\.|[^"])*")+', line)
-    if not (line[5] and line[5].strip()):
-        continue
-    code.append(line[5])
+    if (line[5]):
+        code.append(line[5])
     size.append(int(line[6]))
