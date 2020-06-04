@@ -6,7 +6,7 @@ from time import sleep
 import datetime
 
 if __name__ == "__main__":
-        for i in range(10000):
+        for i in range(10):
                 sleep(random.random())
                 sys.stdout.write("{:d}.{:d}.{:d}.{:d} - [{}] \"GET /projects/260 HTTP/1.1\" {} {}\n".format(
                         random.randint(1, 255), random.randint(1, 255), random.randint(1, 255),

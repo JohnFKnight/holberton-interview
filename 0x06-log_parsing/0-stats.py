@@ -24,14 +24,22 @@ def signal_handler(signal, frame):
 
 code = []
 size = []
+if not sys.stdin:
+    exit(0)
 for c, line in enumerate(sys.stdin):
     if (c > 0 and c % 9 == 0):
+        print("in loop")
         printall(code, size)
     signal.signal(signal.SIGINT, signal_handler)
     line = line.rstrip()
     line = re.findall(r'(?:[^\s,"]|"(?:\\.|[^"])*")+', line)
+    if len(line) != 7:
+        code.append(line[3])
+        size.append(int(line[4]))
+        continue
     if (line[5]):
         code.append(line[5])
     size.append(int(line[6]))
+print("outside loop")
 printall(code, size)
 exit(0)
