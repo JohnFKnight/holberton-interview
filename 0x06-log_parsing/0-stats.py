@@ -27,5 +27,7 @@ for c, line in enumerate(sys.stdin):
     line = line.rstrip()
 #     # print(re.split("-| ", line))
     line = re.findall(r'(?:[^\s,"]|"(?:\\.|[^"])*")+', line)
+    if not line[5]:
+        continue
     code.append(line[5])
     size.append(int(line[6]))
