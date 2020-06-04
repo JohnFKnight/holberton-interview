@@ -12,12 +12,13 @@ import signal
 
 
 def printall(status, fsize):
+    """Print output."""
     print("File size: {}".format(sum(fsize)))
     [print("{}: {}".format(k, v)) for k, v in Counter(status).items()]
 
 
 def signal_handler(signal, frame):
-    print (code, size, status, fsize)
+    """Handle Ctrl-c."""
     # printall(code, size)
     sys.exit(0)
 
@@ -28,8 +29,9 @@ for c, line in enumerate(sys.stdin):
         printall(code, size)
     signal.signal(signal.SIGINT, signal_handler)
     line = line.rstrip()
-#     # print(re.split("-| ", line))
     line = re.findall(r'(?:[^\s,"]|"(?:\\.|[^"])*")+', line)
     if (line[5]):
         code.append(line[5])
     size.append(int(line[6]))
+printall(code, size)
+exit(0)
