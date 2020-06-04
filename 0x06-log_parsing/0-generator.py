@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" Parse logs and aggregate. """
 import random
 import sys
 from time import sleep
