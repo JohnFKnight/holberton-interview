@@ -33,10 +33,10 @@ for c, line in enumerate(sys.stdin):
     signal.signal(signal.SIGINT, signal_handler)
     line = line.rstrip()
     line = re.findall(r'(?:[^\s,"]|"(?:\\.|[^"])*")+', line)
-    if len(line) != 7:
-        code.append(line[3])
-        size.append(int(line[4]))
-        continue
+    # if len(line) != 7:
+    #     code.append(line[3])
+    #     size.append(int(line[4]))
+    #     continue
     if (line[5]):
         code.append(line[5])
     size.append(int(line[6]))
