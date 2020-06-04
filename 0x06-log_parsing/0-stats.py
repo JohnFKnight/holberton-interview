@@ -12,8 +12,8 @@ import signal
 
 
 def printall(status, fsize):
-    print("File size:", sum(size))
-    [print(k + ":", v) for k, v in Counter(code).items()]
+    print("File size: {}".format(sum(fsize)))
+    [print("{}: {}".format(k, v)) for k, v in Counter(status).items()]
 
 
 def signal_handler(signal, frame):
@@ -29,7 +29,7 @@ for c, line in enumerate(sys.stdin):
     line = line.rstrip()
 #     # print(re.split("-| ", line))
     line = re.findall(r'(?:[^\s,"]|"(?:\\.|[^"])*")+', line)
-    if not line[5]:
+    if not (line[5] and line[5].strip()):
         continue
     code.append(line[5])
     size.append(int(line[6]))
