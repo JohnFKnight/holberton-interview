@@ -5,6 +5,29 @@
 #include "palindrome.h"
 
 /**
+ * makearray - make array from int
+ * @hn: number
+ * @list: empty array
+ *
+ * Return: full array
+ */
+
+/* int *makearray(listint_t *head, int *list) */
+/* { */
+/* 	int node = 0; */
+/* 	listint_t *current = head; */
+/* 	int *arr = list; */
+
+/* 	while (current != NULL) */
+/* 	{ */
+/* 		arr[node] = current->n; */
+/* 		node++; */
+/* 		current = current->next; */
+/* 	} */
+/* 	return (arr); */
+/* } */
+
+/**
  * is_palindrome - see if unsigned
  * @n: integer
  * Return: 1 if yes, 0 if no
