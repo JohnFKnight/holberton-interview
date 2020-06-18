@@ -23,7 +23,9 @@ int main(void)
 	add_nodeint(&head, 4);
 	add_nodeint(&head, 98);
 	add_nodeint(&head, 402);
+	add_nodeint(&head, 972);
 	add_nodeint(&head, 1024);
+	add_nodeint(&head, 2048);
 	print_listint(head);
 
 	if (check_cycle(head) == 0)
