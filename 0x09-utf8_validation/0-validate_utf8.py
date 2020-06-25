@@ -3,6 +3,7 @@
 Determine if a given data set represents a valid UTF-8 encoding.
 """
 
+
 def validUTF8(data):
     # print(len(data))
     mask1 = 1 << 7
@@ -14,7 +15,7 @@ def validUTF8(data):
             return True
     for i, num in enumerate(data):
         if num < 128:
-            if num & mask1 != 0:  #See how many bytes it is; i.e. MSB's = 1
+            if num & mask1 != 0:
                 return False
             else:
                 return True
