@@ -70,7 +70,6 @@ int slide_left(int *line, int size)
 		/* i = currIdx + 1; */
 		if (line[i] == 0)
 		{
-			printf("HELLOOOO\n");
 			shift_left(line, i, len);
 		}
 		if (line[currIdx] == line[currIdx + 1])
