@@ -63,12 +63,16 @@ int slide_left(int *line, int size)
 		if (line[currIdx] == 0)
 			shift_left(line, i, len);
 
-		if (i > len)  /* All/remaining zeros? */
-			return (0);
-
 		i = currIdx + 1;
+		if (i == len)  /* All/remaining zeros? */
+			return (1);
+
+		/* i = currIdx + 1; */
 		if (line[i] == 0)
+		{
+			printf("HELLOOOO\n");
 			shift_left(line, i, len);
+		}
 		if (line[currIdx] == line[currIdx + 1])
 		{
 			line[currIdx] = 2 * line[currIdx];
@@ -77,11 +81,11 @@ int slide_left(int *line, int size)
 		i = currIdx;
 	}
 
-	if (currIdx < len)
-	{
-		for (i = currIdx; i < len - 1; i++)
-			line[i] = 0;
-	}
+	/* if (currIdx < len - 2) */
+	/* { */
+	/* 	for (i = currIdx;; i++) */
+	/* 		line[i] = 0; */
+	/* } */
 	return (1);
 }
 
@@ -118,11 +122,11 @@ int slide_right(int *line, int size)
 		i = currIdx;
 	}
 
-	if (currIdx > 0)
-	{
-		for (i = currIdx;; i--)
-			line[i] = 0;
-	}
+	/* if (currIdx > 0) */
+	/* { */
+	/* 	for (i = currIdx;; i--) */
+	/* 		line[i] = 0; */
+	/* } */
 	return (1);
 }
 
