@@ -7,7 +7,7 @@
 
 /**
  * print_array - Prints out an array of integer, followed by a new line
- * 
+ *
  * @array: Pointer to the array of integer to be printed
  * @size: Number of elements in @array
  */
@@ -70,6 +70,8 @@ int main(int ac, char **av)
 	/* Slide and merge */
 	if (!slide_line(line, size, direction))
 	{
+		/* printf("FUNCTION RETURN VALUE: %d\n", slide_line(line, size, direction)); */
+		/* printf("EXIT SUCCESS VALUE: %d\n", EXIT_SUCCESS); */
 		fprintf(stderr, "Failed to slide and merge line\n");
 		return (EXIT_FAILURE);
 	}
