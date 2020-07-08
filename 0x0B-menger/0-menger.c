@@ -1,0 +1,131 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+
+
+/**
+ * print_squ - print the square (or a row)
+ * @square: num of # to print per row
+ *
+ * Return: nothing
+ */
+void print_squ(char *square, int level)
+{
+	char *ptr = square;
+	/* Assign 1 Menger Sponge in 3x3 array
+	 * For level > 1:
+	 * Row 1 and 3 = 3 x array
+	 * Row 2: if cell(2,2); cotinue;
+	*/
+	/* char aquare1 = ["###"]["# #"]["###"]; */
+	/* printf(square1); */
+
+	/* int i; */
+
+	// Try #2
+	for (int k = 0; k < 3; k++); {
+		for (int i = 0; i < 5; i++) {
+			square = ptr;
+			for (int j = 0; j < 3; j++) {
+				printf("%.3s", square);
+				/* printf("\n"); */
+				square += 3;
+			}
+			printf("\n");
+		}
+	}
+	// Try #1.
+       /* for (int i = 0; i < 3; i++) { */
+       /* 	       square = ptr; */
+       /* 	       for (int j = 0; j < 3; j++) { */
+       /* 			printf("%.3s\n", square); */
+       /* 			square += 3; */
+       /* 	       } */
+       /* 	       /\* printf("\n"); *\/ */
+       /* } */
+
+
+	/* printf("%d = \n", i); */
+
+	/* for (int a = 0; a < 3; a++) { */
+	/* 	       printf("%.3s\n", (q)); */
+	/* 	       q += 3; */
+	/* } */
+
+
+}
+
+/* From Wikiepdai
+ * Level 0 = 1 square
+ * Level 1... n = each previous square split into 9 squares
+ * with center sqaure removed from each
+*/
+
+/**
+ * menger - print menger square
+ * @level: the size of the menger square
+ *
+ * Return: nothing
+ */
+
+int main(void)
+{
+       char square[3][3] = {
+       		{"###"},
+       		{"# #"},
+       		{"###"}
+       	};
+
+       char *ptr = (char*) &square;  //arr; This works w warning: char *q = &square
+       print_squ(ptr, 2);
+
+       /* printf("%p\n", square); */
+
+       /* for (int a = 0; a < 3; a++) */
+       /* 	       printf("%d ", *(square++)); */
+       /* printf("\n"); */
+
+       /* int **ptr = *square; */
+
+       /* from https://stackoverflow.com/questions/44523828/initialization-
+	  from-incompatible-pointer-type-warning-when-assigning-to-a-pointe */
+       /* { */
+       /* 	       int arr[5] = {3, 0, 3, 4, 1}; */
+       /* 	       int *q = arr; */
+
+       /* 	       printf("%p\n%p\n\n", q); */
+
+       /* 	       for (int a = 0; a < 5; a++) */
+       /* 		       printf("%d ", *(q++)); */
+       /* 	       printf("\n"); */
+       /* } */
+
+       /* char *ptr = (char*) &square;  //arr; This works w warning: char *q = &square */
+       /* print_squ(ptr, 1); */
+
+       /* for (int a = 0; a < 3; a++) { */
+       /* 	       printf("%.3s\n", (q)); */
+       /* 	       q += 3; */
+       /* } */
+       /* printf("\n"); */
+
+
+
+       /* for (int i = 0; i < 3; i++) { */
+       /* 	       for (int j = 0; j < 5; j++) { */
+       /* 			printf("%.3s", *square[i]); */
+       /* 	       } */
+       /* 	       printf("\n"); */
+       /* } */
+
+
+
+       /* char *ptr = &square; */
+
+	/* printf("%s\n", square); */
+
+	/* for (int i = 0; i < 3; i++) */
+	/* 	for (int j = 0; j < 3; j++) */
+	/* 		printf("%s", square[i][j]); */
+}
