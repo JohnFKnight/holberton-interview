@@ -33,22 +33,9 @@ void menger(int level)
 		{
 			for (int j = 0; j < detail; j++)
 			{
-				if (i == 1 && j != 0 && j % 3 == 1)
-				{
-					printf(" ");
-					continue;
-				}
-				if ((k % 3 == 1) && j >= 3 && j <= 5)
-				{
-					printf(" ");
-					continue;
-				}
-				if ((k % 3 == 1) && j >= 12 && j <= 14)
-				{
-					printf(" ");
-					continue;
-				}
-				if ((k % 3 == 1) && j >= 21 && j <= 23)
+				if ((i == 1 && j != 0 && j % 3 == 1) ||
+				    ((k % 3 == 1) && (j >= 3 + (detail * i)) &&
+				     (j <= 5 + (detail * i))))
 				{
 					printf(" ");
 					continue;
