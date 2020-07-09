@@ -80,23 +80,35 @@ int main(void)
        	};
        char *hash = "#";
        double level = 1;
-       printf("3^level = %lf\n", pow(3, level));
-       if (level == 0) { printf("#"); }
+       /* printf("3^level = %lf\n", pow(3, level)); */
+       /* printf("3 mod 2 = %d\n", 3 % 2); */
+       if (level == 0) {
+	       printf("#\n");
+	       return (0);
+       }
+       int j;
        // THIS PRINTS CORRECTLY HORIZONTALLY!!
        // PRINT THIS "LEVEL" NUM OF TIMES, SKIPPING 2,2
        /* for (int l = 0; l < 3; l++) { */
-	       for (int k = 0; k < 1; k++) {
-		       for (int i = 0; i < 3; i++) {
-			       for (int j = 0; j < 3; j++) {
-				       if ((i == 1) && (j == 1)) {
-				       	       printf(" ");
-				       	       continue;
-				       }
-				       /* printf("%s", *square[i]); */
-				       printf("#");
+       for (int k = 0; k < pow(3, level -1); k++) {
+	       /* printf("level: %d\n", k); */
+	       for (int i = 0; i < 3; i++) {
+		       for (int j = 0; j < pow(3, level); j++) {
+			       /* printf("%d", j); */
+			       if (i == 1 && j != 0 && j % 3 == 1) {
+				       printf(" ");
+				       continue;
 			       }
-			       printf("\n");
+			       if (k % 3 == 1 && j > 2 && j < 6) {
+			       	       printf(" ");
+			       	       continue;
+			       }
+			       /* printf("%s", *square[i]); */
+			       printf("#");
+			       /* printf("%d", j); */
 		       }
+		       printf("\n");
 	       }
+       }
        /* } */
 }
