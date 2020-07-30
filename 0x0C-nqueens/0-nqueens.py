@@ -109,7 +109,7 @@ def solveNQ(args):
 
     if len(args) < 2:
         print("Usage: nqueens N")
-        exit (1)
+        exit(1)
 
     n = args[1]
 
@@ -120,11 +120,11 @@ def solveNQ(args):
 
     if not isinstance(n, int):
         print("N must be a number")
-        exit (1)
+        exit(1)
 
     if n < 4:
         print("N must be at least 4")
-        exit (1)
+        exit(1)
 
     board = [[0 for j in range(n)]
              for i in range(n)]
