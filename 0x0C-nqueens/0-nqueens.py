@@ -10,25 +10,12 @@ k = 1
 # A utility function to print solution
 def printSolution(board):
 
-    # global k
-    # print(k, "-\n")
-    # k = k + 1
-    # for i in range(5):
-    #     for j in range(5):
-    #         print(board[i][j], end = " ")
-    #     print("\n")
-    # print("\n")
-
     print([(ix, iy) for ix, row in enumerate(board)
            for iy, i in enumerate(row) if i == 1])
 
 
 """ A utility function to check if a queen can
-be placed on board[row][col]. Note that this
-function is called when "col" queens are
-already placed in columns from 0 to col -1.
-So we need to check only left side for
-attacking queens """
+be placed on board[row][col]. """
 
 
 def isSafe(board, row, col, n):
@@ -58,8 +45,7 @@ def isSafe(board, row, col, n):
 
     return True
 
-""" A recursive utility function to solve N
-Queen problem """
+""" A recursive utility function to solve puzzle """
 
 
 def solveNQUtil(board, col, n):
@@ -91,18 +77,11 @@ def solveNQUtil(board, col, n):
             remove queen from board[i][col] """
             board[i][col] = 0  # BACKTRACK
 
-    """ If queen can not be place in any row in
-    this column col then return false """
     return res
 
 """ This function solves the N Queen problem using
 Backtracking. It mainly uses solveNQUtil() to
-solve the problem. It returns false if queens
-cannot be placed, otherwise return true and
-prints placement of queens in the form of 1s.
-Please note that there may be more than one
-solutions, this function prints one of the
-feasible solutions."""
+solve the problem."""
 
 
 def solveNQ(args):
