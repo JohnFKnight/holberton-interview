@@ -35,6 +35,8 @@ int main(void)
 	printf("Found %d at index: %p\n\n", 76, (void *) res);
 	res =  linear_skip(list, 75);
 	printf("Found %d at index: %p\n\n", 75, (void *) res);
+	res =  linear_skip(list, -1);
+	printf("Found %d at index: %p\n\n", -1, (void *) res);
 	res =  linear_skip(list, 16);
 	printf("Found %d at index: %p\n", 16, (void *) res);
 
