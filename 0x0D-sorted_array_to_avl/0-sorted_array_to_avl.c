@@ -12,7 +12,6 @@
  * Return: new node
  */
 
-/* int *make_avl(int *dest, int *src)   /\* , int idx) *\/ */
 avl_t *make_node(avl_t *parent, int data)
 {
 	avl_t *node = malloc(sizeof(avl_t));
@@ -23,23 +22,8 @@ avl_t *make_node(avl_t *parent, int data)
 	node->right = NULL;
 
 	return (node);
-	/* return (memcpy(dest, src, sizeof(int))); */
 }
 
-/**
- * subarray - create new array, left and right
- * @dest: l/r destination array
- * @src: source array
- * @start: 1st index of arr to be added
- * @end: last index of arr to be added
- *
- * Return: modified destination array
- */
-
-int *subarray(int *dest, int *src, int start, int end)
-{
-	return (memcpy(dest, src, (end - start) * sizeof(int)));
-}
 
 /**
  * sorted_array_to_avl - Make AVL from sorted array
@@ -55,39 +39,22 @@ avl_t *sorted_array_to_avl(int *array, size_t size)
 	/* 8/13/20. create root. L=create root/2. R=create root/2 */
 
 	size_t right;
-	/* int *avl = 0, *l = 0, *r = 0; */
 	avl_t *avl;
-	/* avl_t *parent; */
 
-	/* parent = NULL; */
 	avl = NULL;
-	/* mid = size; */
 
 	if (size > 0)
 	{
 		right = size / 2;
 		if (size % 2 == 0)
-		{
 			size = size / 2 - 1;
-		}
 		else
-		{
 			size = size / 2;
-		}
+
 		avl = make_node(avl, array[size]);
 
-		/* mid = size; */
-		/* printf("mide %lu. size %lu \n", mid, size); */
-		/* avl = make_avl(array[mid]);  /\* avl, array); *\/   /\* , mid); *\/ */
-		/* l = subarray(l, array, 0, mid - 1); */
-		/* avl->parent = sorted_array_to_avl(array, mid); */
-		avl->left = sorted_array_to_avl(array, size);   /* size / 2 -  1); */
-		/* r = subarray(r, array, mid + 1, size - 1); */
-		/* if (size % 2 != 0) */
+		avl->left = sorted_array_to_avl(array, size);
 		avl->right = sorted_array_to_avl(&array[size + 1], right);
-		/* else */
-		/*	avl->right = sorted_array_to_avl(array, mid - 1); */
 	}
-	/* binary_tree_print(avl); */
 	return (avl);
 }
