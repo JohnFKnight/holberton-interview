@@ -14,6 +14,7 @@
 avl_t *make_node(avl_t *parent, int data)
 {
 	avl_t *node = malloc(sizeof(avl_t));
+
 	if (!node)
 		return (NULL);
 
@@ -58,7 +59,7 @@ avl_t *sorted_array_to_avl(int *array, size_t size)
 			/* return (avl); */
 		/* } */
 		/* else if (right == 0) */
-		/* 	return (avl); */
+		/* return (avl); */
 		avl = make_node(avl, array[size]);
 		avl->left = sorted_array_to_avl(array, size);
 		avl->right = sorted_array_to_avl(&array[size + 1], right);
