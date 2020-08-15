@@ -3,7 +3,6 @@
 #include <string.h>
 #include "binary_trees.h"
 
-
 /**
  * make_node - append new node into avl array
  * @parent: node parent
@@ -15,6 +14,8 @@
 avl_t *make_node(avl_t *parent, int data)
 {
 	avl_t *node = malloc(sizeof(avl_t));
+	if (!node)
+		return (NULL);
 
 	node->n = data;
 	node->parent = parent;
@@ -33,7 +34,6 @@ avl_t *make_node(avl_t *parent, int data)
  * Return: Pointer to AVL
  */
 
-
 avl_t *sorted_array_to_avl(int *array, size_t size)
 {
 	/* 8/13/20. create root. L=create root/2. R=create root/2 */
@@ -43,6 +43,7 @@ avl_t *sorted_array_to_avl(int *array, size_t size)
 
 	avl = NULL;
 
+
 	if (size > 0)
 	{
 		right = size / 2;
@@ -51,10 +52,23 @@ avl_t *sorted_array_to_avl(int *array, size_t size)
 		else
 			size = size / 2;
 
+		/* if (size == 0 && right != 0) */
+		/* { */
+			/* size = right; */
+			/* return (avl); */
+		/* } */
+		/* else if (right == 0) */
+		/* 	return (avl); */
 		avl = make_node(avl, array[size]);
-
 		avl->left = sorted_array_to_avl(array, size);
 		avl->right = sorted_array_to_avl(&array[size + 1], right);
 	}
+	/* avl = make_node(avl, array[size]); */
+	/* avl->left = make_node(avl, array[size]); */
+	/* avl->right = make_node(avl, array[size]); */
+
+	/* avl->left = sorted_array_to_avl(array, size); */
+	/* avl->right = sorted_array_to_avl(&array[size + 1], right); */
+
 	return (avl);
 }
