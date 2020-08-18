@@ -9,7 +9,7 @@ request(url, async function (error, response, body) {
   if (error) return console.error(error);
   const characters = JSON.parse(body).characters;
   for (const character of characters) {
-    await new Promise(function (resolve, reject) {
+    await new Promise((resolve, reject) => {
       request(character, function (err, func, bod) {
         if (err) return console.error(err);
         console.log(JSON.parse(bod).name);
