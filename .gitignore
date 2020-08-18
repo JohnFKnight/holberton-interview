@@ -4,3 +4,4 @@
 **__pycache__/
 *will*.*
 *.pas
+package*.json
