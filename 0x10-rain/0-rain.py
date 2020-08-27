@@ -3,7 +3,7 @@
 """
 
 
-def rain(walls: List) -> int:
+def rain(walls) -> int:
     """
     Given a list of nummbers that represent walls/bars of
     'number' high and width = 1 unit,
