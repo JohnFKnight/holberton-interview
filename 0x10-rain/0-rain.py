@@ -2,8 +2,6 @@
 """ Calc rain caught in troughs betwn bars
 """
 
-from typing import List, Dict
-
 
 def rain(walls: List) -> int:
     """
@@ -62,6 +60,6 @@ def rain(walls: List) -> int:
     return water
 
 
-if __name__ == "__main__":
-    """ main """
-    rain(walls)
+# if __name__ == "__main__":
+#     """ main """
+#     rain(walls)
