@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+""" Calc rain caught in troughs betwn bars
+"""
 
 from typing import List, Dict
 
@@ -61,4 +63,5 @@ def rain(walls: List) -> int:
 
 
 if __name__ == "__main__":
+    """ main """
     rain(walls)
