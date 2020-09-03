@@ -35,7 +35,9 @@ void siftDown(int *a, int start, int end)
 		if ((child + 1) <= end && a[swap] < a[child + 1])
 			swap = child + 1;
 		if (swap == root)
+		{
 			return;
+		}
 		else
 		{
 			/* swap(a[root], a[swap]); */
