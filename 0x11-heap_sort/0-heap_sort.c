@@ -19,7 +19,7 @@
 
 void siftDown(int *a, int start, int end)
 {
-	printf("IN SIFTDOWN\n");
+	/* printf("IN SIFTDOWN\n"); */
 	int b, swap, child;
 	int root = start;
 	int child_l = 2 * root + 1;
@@ -78,7 +78,7 @@ void heapify(int *a, size_t count)
 
 	while (start >= 0)
 	{
-		printf("IN HEAPIFY\n");
+		/* printf("IN HEAPIFY\n"); */
 		siftDown(a, start, size - 1);
 		start--;
 	}
@@ -93,16 +93,17 @@ void heapify(int *a, size_t count)
  */
 void heap_sort(int *array, size_t size)
 {
-	size = (int)size;
+	int size2 = (int)size;
 	int b, end = 0;
 	/* int end = int(size) */
 
 	heapify(array, size);
-	end = size - 1;
-	printf("END %d, SIZE %lu\n", end, size);
+	end = size2 - 1;
+	print_array(array, size);
+	/* printf("END %d, SIZE %lu\n", end, size); */
 	while (end > 0)
 	{
-		printf("IN WHILE LOOP IN HEAP SORT\n");
+		/* printf("IN WHILE LOOP IN HEAP SORT\n"); */
 		/* printf("%ls\n", array); */
 		/* swap(array[end], array[0]); */
 		b = array[end];
@@ -110,6 +111,6 @@ void heap_sort(int *array, size_t size)
 		array[0] = b;
 		end--;
 		siftDown(array, 0, end);
-		printf("done sifting in heap sort\n");
+		/* printf("done sifting in heap sort\n"); */
 	}
 }
