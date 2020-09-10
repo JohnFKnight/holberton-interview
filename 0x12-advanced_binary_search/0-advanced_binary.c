@@ -29,7 +29,7 @@ int advanced_binary(int *array, size_t size, int value)
 	{
 		if (left && m > 0)
 
-			found = advanced_binary(array, m, value);
+			found = advanced_binary(array, m + 1, value);
 
 		else
 			found = m;
@@ -47,7 +47,7 @@ int advanced_binary(int *array, size_t size, int value)
 	else
 	{
 		left = 1;
-		found = advanced_binary(array, m, value);
+		found = advanced_binary(array, m + 1, value);
 	}
 	return (found);
 }
