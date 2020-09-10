@@ -19,14 +19,20 @@
 
 void siftDown(int *a, int start, int end)
 {
-	/* printf("IN SIFTDOWN\n"); */
 	int b, swap, child;
 	int root = start;
 	int child_l = 2 * root + 1;
+
 	/* int child_r = child_l + 1; */
 
-	while (child_l <= end)
+	/* printf("IN SIFTDOWN\n"); */
+
+	/* print_array(a, end); */
+
+	while (child_l <= end)   /* end) */
 	{
+		/* printf("IN SIFTDOWN WHILE LOOP\n"); */
+		/* print_array(a, end); */
 		child = child_l;
 		swap = root;
 
@@ -46,6 +52,7 @@ void siftDown(int *a, int start, int end)
 			a[swap] = b;
 			root = swap;
 		}
+		end--;
 	}
 }
 
@@ -66,6 +73,7 @@ void heapify(int *a, size_t count)
 	/* if idx % 2 != 0 => left, else right */
 	/* so if size is even , last node is right, else left */
 	/* Find last parent from last node */
+
 	if (last % 2 == 0)
 	{
 		parent = (last - 2) / 2;
@@ -74,12 +82,24 @@ void heapify(int *a, size_t count)
 	{
 		parent = (last - 1) / 2;
 	}
+
+	/* if (size % 2 == 0) */
+	/* { */
+	/* parent = (size - 1) / 2; */
+	/* } */
+	/* else */
+	/* { */
+	/* parent = (size) / 2; */
+	/* } */
+
 	start = parent;
 
 	while (start >= 0)
 	{
 		/* printf("IN HEAPIFY\n"); */
-		siftDown(a, start, size - 1);
+		/* printf("1 - START/PARENT %d. LAST %d. SIZE %d\n", parent, last, size); */
+		siftDown(a, start, size--);
+
 		start--;
 	}
 }
@@ -98,19 +118,21 @@ void heap_sort(int *array, size_t size)
 	/* int end = int(size) */
 
 	heapify(array, size);
+
 	end = size2 - 1;
-	print_array(array, size);
+	/* print_array(array, size); */
 	/* printf("END %d, SIZE %lu\n", end, size); */
 	while (end > 0)
 	{
 		/* printf("IN WHILE LOOP IN HEAP SORT\n"); */
-		/* printf("%ls\n", array); */
+		/* printf("%dlu\n", array); */
 		/* swap(array[end], array[0]); */
 		b = array[end];
 		array[end] = array[0];
 		array[0] = b;
 		end--;
 		siftDown(array, 0, end);
+		print_array(array, size);
 		/* printf("done sifting in heap sort\n"); */
 	}
 }
