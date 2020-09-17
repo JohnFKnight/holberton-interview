@@ -5,6 +5,7 @@ from sys import argv
 
 
 def create_list(hot_list, posts, posts_len):
+    """ Create the list. """
     i = 0
     while i < posts_len:
         hot_list.append(posts[i]['data']['title'])
