@@ -2,8 +2,36 @@
 #include <stdlib.h>
 #include "holberton.h"
 
-void printnum(unsigned long n);
+/* void printnum(unsigned long n); */
 
+/* /\** */
+/*  * checknum - Check if args are numbers */
+/*  * */
+/*  * @num: argument to check */
+/*  * */
+/*  * Return: true or false */
+/*  *\/ */
+/* bool checknum(num) */
+/* { */
+	
+/* } */
+
+/**
+ * printerr - Print the word Error
+ *
+ * Return: nothing.
+ */
+void printerr()
+{
+	char *err = "Error";
+
+	while (*err)
+	{
+		_putchar(*err);
+		err++;
+	}
+	_putchar('\n');
+}
 
 /**
  * mul  - multiply two numbers. Print the result
@@ -19,6 +47,10 @@ void printnum(unsigned long n);
 void mul(unsigned long n1, unsigned long n2)
 {
 	unsigned long res;
+
+	/* res = malloc(sizeof(unsigned long)); */
+	/* if (!res) */
+	/* 	exit(98); */
 
 	res = n1 * n2;
 	printf("%lu\n", res);
@@ -51,18 +83,23 @@ void printnum(unsigned long num)
  */
 int main(int argc, char **argv)
 {
-	char *err = "Error";
+	unsigned long n1, n2;
 
 	if (argc < 3)
 	{
-		while (*err)
-		{
-			_putchar(*err);
-			err++;
-		}
-		_putchar('\n');
-		exit(1);
+		printerr();
+		exit(98);
 	}
-	mul((unsigned long)argv[1], (unsigned long)argv[2]);
+
+	n1 = argv[1];
+	n2 = argv[2];
+
+	/* if (!chechnum(n1) || !checknum(n2)) */
+	/* { */
+	/* 	printerr(); */
+	/* 	exit(98); */
+	/* } */
+
+	mul(n1, n2);
 	return (0);
 }
