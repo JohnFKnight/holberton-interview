@@ -7,7 +7,7 @@ void printnum(unsigned long n);
 
 /**
  * mul  - multiply two numbers. Print the result
- * From Task 12/102, Ininite Add, in 217, 0x06.C: More pointers, arrays, strings
+ * From Task 12/102, Ininite Add in 217, 0x06.C: More pointers, arrays, strings
  *
  * @n1: first number
  * @n2: second number
@@ -19,6 +19,7 @@ void printnum(unsigned long n);
 void mul(unsigned long n1, unsigned long n2)
 {
 	unsigned long res;
+
 	res = n1 * n2;
 	printf("%lu\n", res);
 	printnum(res);
@@ -43,14 +44,15 @@ void printnum(unsigned long num)
 /**
  * main - driver program
  *
- * argc = ARGument Counter: number of args
- * argv - ARGument vector (array of args)
+ * @argc: ARGument Counter: number of args
+ * @argv: ARGument vector (array of args)
  *
- * Return - nothing
+ * Return: nothing
  */
 int main(int argc, char **argv)
 {
 	char *err = "Error";
+
 	if (argc < 3)
 	{
 		while (*err)
@@ -59,7 +61,7 @@ int main(int argc, char **argv)
 			err++;
 		}
 		_putchar('\n');
-		exit (1);
+		exit(1);
 	}
 	mul((unsigned long)argv[1], (unsigned long)argv[2]);
 	return (0);
