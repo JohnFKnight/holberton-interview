@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "holberton.h"
 
-void printnum(int n);
+void printnum(unsigned long n);
 
 
 /**
@@ -16,10 +16,11 @@ void printnum(int n);
  */
 
 /* char *mul(char *n1, char *n2, char *r, int size_r) */
-void mul(int n1, int n2)
+void mul(unsigned long n1, unsigned long n2)
 {
-	int res = n1 * n2;
-	/* printf("%d\n", res); */
+	unsigned long res;
+	res = n1 * n2;
+	printf("%lu\n", res);
 	printnum(res);
 	_putchar('\n');
 
@@ -32,7 +33,7 @@ void mul(int n1, int n2)
  *
  * Return: nothing
  */
-void printnum(int num)
+void printnum(unsigned long num)
 {
 	if (num / 10)
 		printnum(num / 10);
@@ -60,6 +61,6 @@ int main(int argc, char **argv)
 		_putchar('\n');
 		exit (1);
 	}
-	mul((long)argv[1], (long)argv[2]);
+	mul((unsigned long)argv[1], (unsigned long)argv[2]);
 	return (0);
 }
