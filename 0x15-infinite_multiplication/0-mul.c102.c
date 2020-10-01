@@ -13,7 +13,7 @@
 /*  *\/ */
 /* bool checknum(num) */
 /* { */
-	
+
 /* } */
 
 /**
@@ -21,7 +21,7 @@
  *
  * Return: nothing.
  */
-void printerr()
+void printerr(void)
 {
 	char *err = "Error";
 
@@ -50,7 +50,7 @@ void mul(unsigned long n1, unsigned long n2)
 
 	/* res = malloc(sizeof(unsigned long)); */
 	/* if (!res) */
-	/* 	exit(98); */
+	/* exit(98); */
 
 	res = n1 * n2;
 	printf("%lu\n", res);
@@ -96,8 +96,8 @@ int main(int argc, char **argv)
 
 	/* if (!chechnum(n1) || !checknum(n2)) */
 	/* { */
-	/* 	printerr(); */
-	/* 	exit(98); */
+	/* printerr(); */
+	/* exit(98); */
 	/* } */
 
 	mul(n1, n2);
