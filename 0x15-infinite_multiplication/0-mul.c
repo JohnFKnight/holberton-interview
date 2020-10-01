@@ -91,8 +91,8 @@ int main(int argc, char **argv)
 		exit(98);
 	}
 
-	n1 = argv[1];
-	n2 = argv[2];
+	n1 = (unsigned long)argv[1];
+	n2 = (unsigned long)argv[2];
 
 	/* if (!chechnum(n1) || !checknum(n2)) */
 	/* { */
