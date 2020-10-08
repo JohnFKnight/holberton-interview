@@ -5,23 +5,26 @@ def printarr(arr):
     for row in arr:
         print(row)
 
-def rotate_2d_matrix(rez):
+def rotate_2d_matrix(m):
     """ Roatate a matrix."""
-    printarr(rez)
+    printarr(m)
     print('\n')
-    m = rez
+    # m = rez
     # for x in range(3):
-    for row in m:
+    # for row in m:
         # row.reverse()
         # print("Row reversed: ", row)
-        m = [[m[j][i] for j in range(len(m))] for i in range(len(m[0]))]
-    # print("print rez function")
-    # printarr(rez)
-    # print("print rez loop")
+    m = [[m[j][i] for j in range(len(m))] for i in range(len(m[0]))]
+    # print("row", row)
+    print("print m function")
+    printarr(m)
+        # print("print rez loop")
+
     for row in m:
         row.reverse()
-    print("rez: ", rez)
-    print("m: ", m)
+        # print("rez: ", rez)
+    print("After reverse")
+    printarr(m)
         # print( "Before reverse")
         # printarr(rez)
         # rez.reverse()
