@@ -1,7 +1,9 @@
 #!/usr/bin/python3
+""" Rotate a matrix. """
 
 
 def rotate_2d_matrix(rez):
+    """ Roatate a matrix."""
     m = rez
     for x in range(len(m)):
         for row in m:
