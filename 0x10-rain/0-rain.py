@@ -41,7 +41,7 @@ def rain(walls) -> int:
     water = 0
     last_high = 0
     peaks = {}
-    print(walls)
+    # print(walls)
     for i, current in enumerate(walls[1:-1], start=1):
         prev = walls[i - 1]
         nxt = walls[i + 1]
