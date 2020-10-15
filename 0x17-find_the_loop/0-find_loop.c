@@ -25,6 +25,7 @@ listint_t *get_loop(listint_t *node, listint_t *list)
 			return (nptr->next);
 		lptr = lptr->next;
 	}
+	return (NULL);
 }
 
 /**
