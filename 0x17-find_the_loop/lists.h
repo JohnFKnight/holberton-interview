@@ -19,5 +19,7 @@ listint_t *find_listint_loop(listint_t *head);
 listint_t *add_nodeint(listint_t**, int);
 void  free_listint_safe(listint_t**);
 void print_listint_safe(listint_t*);
+listint_t *get_loop(listint_t *node, listint_t *list);
+
 
 #endif /*_LISTS_H*/
