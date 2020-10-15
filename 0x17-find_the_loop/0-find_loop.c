@@ -46,10 +46,10 @@ listint_t *find_listint_loop(listint_t *head)
 		if (fast->next != NULL)
 			fast = fast->next->next;
 		else
-			return (0);
+			return (NULL);
 
 		if (slow == NULL || fast == NULL)
-			return (0);
+			return (NULL);
 		if (slow == fast)
 			return (get_loop(slow, head));
 	}
