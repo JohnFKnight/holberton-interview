@@ -54,5 +54,5 @@ listint_t *find_listint_loop(listint_t *head)
 			return (get_loop(slow, head));
 	}
 
-	return (0);
+	return (NULL);
 }
