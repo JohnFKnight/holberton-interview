@@ -3,7 +3,7 @@
 
 
 /**
- * get_loop - Find loop node from find_listint_loop()
+ * get_loop - Find loop node from find_listint_loop
  *
  * @node: node where loop was found
  * @list: the pointer to the head of the list
