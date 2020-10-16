@@ -2,7 +2,7 @@
 
 
 /**
- * get_loop - Find loop node from find_listint_loop
+ * get_loop - Find starting loop node from find_listint_loop
  *
  * @node: node where loop was found
  * @list: the pointer to the head of the list
@@ -11,24 +11,24 @@
  */
 listint_t *get_loop(listint_t *node, listint_t *list)
 {
-	listint_t *nptr;
-	listint_t *lptr;
+	/* listint_t *nptr; */
+	/* listint_t *lptr; */
 
-	lptr = list;
+	/* lptr = list; */
 	while (1)
 	{
-		nptr = node;
-		while (nptr->next != node && nptr->next != lptr)
-			nptr = nptr->next;
-		if (nptr->next == lptr)
-			return (nptr->next);
-		lptr = lptr->next;
+		/* nptr = node; */
+		while (node->next != node && node->next != list)
+			node = node->next;
+		if (node->next == list)
+			return (node->next);
+		list = list->next;
 	}
 	return (NULL);
 }
 
 /**
- * find_listint_loop - Find the node where a loop starts
+ * find_listint_loop - Find if there's a loop in linked list
  *
  * @head: the pointer to the head of the list
  *
