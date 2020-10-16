@@ -11,13 +11,8 @@
  */
 listint_t *get_loop(listint_t *node, listint_t *list)
 {
-	/* listint_t *nptr; */
-	/* listint_t *lptr; */
-
-	/* lptr = list; */
 	while (1)
 	{
-		/* nptr = node; */
 		while (node->next != node && node->next != list)
 			node = node->next;
 		if (node->next == list)
@@ -56,6 +51,5 @@ listint_t *find_listint_loop(listint_t *head)
 		if (slow == fast)
 			return (get_loop(slow, head));
 	}
-
 	return (NULL);
 }
